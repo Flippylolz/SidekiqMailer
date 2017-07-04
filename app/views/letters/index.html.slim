@@ -1,0 +1,19 @@
+h1 Listing letters
+
+table
+  thead
+    tr
+      th Name
+      th Email
+      th
+
+  tbody
+    - @letters.each do |letter|
+      tr
+        td = letter.name
+        td = letter.email
+        td = link_to 'Show', letter
+
+br
+
+= link_to 'New Letter', new_letter_path
